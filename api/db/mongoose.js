@@ -3,7 +3,8 @@
 const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/TaskManager', { useNewUrlParser: true }).then(() => {
+var dbstr = process.env.DBSTRING || 'mongodb://localhost:27017/TaskManager'
+mongoose.connect(dbstr, { useNewUrlParser: true }).then(() => {
     console.log("Connected to MongoDB successfully :)");
 }).catch((e) => {
     console.log("Error while attempting to connect to MongoDB");

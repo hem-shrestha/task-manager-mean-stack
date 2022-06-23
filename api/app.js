@@ -385,7 +385,7 @@ let deleteTasksFromList = (_listId) => {
 
 
 
-var port = proccess.env.BACKEND_PORT || 3000
+var port = process.env.BACKEND_PORT || 3000
 app.listen(port, () => {
     console.log("Server is listening on port " + port);
 })

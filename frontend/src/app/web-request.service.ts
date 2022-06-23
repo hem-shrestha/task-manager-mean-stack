@@ -9,7 +9,7 @@ export class WebRequestService {
   readonly ROOT_URL;
 
   constructor(private http: HttpClient) {
-    this.ROOT_URL = proccess.env.BACKEND_URL || 'http://localhost:3000';
+    this.ROOT_URL = process.env.BACKEND_URL || 'http://localhost:3000';
   }
 
   get(uri: string) {
